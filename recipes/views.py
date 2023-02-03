@@ -6,8 +6,5 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'recipes/pages/home.html', status=200)
 
-def about(request):
-    return HttpResponse('About')
-
-def contact(request):
-    return HttpResponse('Contact')
+def recipe(request, id):
+    return render(request, 'recipes/pages/recipe-view.html', status=200)
